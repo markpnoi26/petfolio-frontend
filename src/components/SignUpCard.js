@@ -92,11 +92,12 @@ class SignUpCard extends React.Component {
             <GridContainer justify="flex-end">
               <GridItem xs={12} sm={12} md={4}>
                 <Card id="login-card" className={this.state.cardAnimation}>
+
                   <form className={classes.form}>
                     <CardHeader color="info" className={classes.cardHeader}>
-                      <h3>New User?</h3>
+                      <h3>In order to access the Demo, use: "admin" for both username and password</h3>
                     </CardHeader>
-                    <CardBody>
+                    {/* <CardBody>
                       <CustomInput
                         labelText="Name"
                         formControlProps={{
@@ -168,18 +169,18 @@ class SignUpCard extends React.Component {
                           autoComplete: "off"
                         }}
                       />
-                    </CardBody>
-                    <CardFooter className={classes.cardFooter}>
+                    </CardBody> */}
+                    {/* <CardFooter className={classes.cardFooter}>
                       <Button round color="primary" size="lg" onClick={this.signUpClick}>
                         Sign Up for an Account
                       </Button>
-                    </CardFooter>
+                    </CardFooter> */}
                   </form>
                 </Card>
               </GridItem>
             </GridContainer>
           </div>
-        </div>
+        </div> 
       </div>
     );
   }
