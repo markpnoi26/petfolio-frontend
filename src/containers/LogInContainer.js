@@ -12,7 +12,7 @@ class LogInContainer extends React.Component {
     return(
       <div>
         <LogInCard {...this.props}/>
-        <SignUpCard {...this.props} />
+        {/* <SignUpCard {...this.props} /> */}
       </div>
     )
   }
