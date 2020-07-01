@@ -1,7 +1,7 @@
 export default function getCurrentUser(id = 1) {
   return (dispatch) => {
     dispatch({type: "FETCH"})
-    fetch(`http://localhost:4000/users/${id}`)
+    fetch(`hhttps://petfolio-backend-api.herokuapp.com/users/${id}`)
       .then(response => response.json())
       .then(currentUser => {
         dispatch({type: 'SET_CURRENT_USER', payload: currentUser})

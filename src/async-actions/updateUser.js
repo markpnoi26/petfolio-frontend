@@ -9,7 +9,7 @@ export default function updateUser(user_id, formData) {
       },
       body: JSON.stringify(formData)
     };
-    fetch(`http://localhost:4000/users/${user_id}`, configObj)
+    fetch(`https://petfolio-backend-api.herokuapp.com/users/${user_id}`, configObj)
       .then(response => response.json())
       .then(userInfo => {
         dispatch({

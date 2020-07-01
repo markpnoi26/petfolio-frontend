@@ -15,7 +15,7 @@ export default function addPet(user_id, pet_info) {
       },
       body: JSON.stringify(formData)
     };
-    fetch(`http://localhost:4000/pets`, configObj)
+    fetch(`https://petfolio-backend-api.herokuapp.com/pets`, configObj)
       .then(response => response.json())
       .then(pet => {
         dispatch({type: "ADD_PET", payload: pet})
