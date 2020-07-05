@@ -95,7 +95,7 @@ class SignUpCard extends React.Component {
 
                   <form className={classes.form}>
                     <CardHeader color="info" className={classes.cardHeader}>
-                      <h3>In order to access the Demo, use: "admin" for both username and password</h3>
+                      <h3>In order to access the Demo, use: "demo" for both username and password</h3>
                     </CardHeader>
                     {/* <CardBody>
                       <CustomInput
