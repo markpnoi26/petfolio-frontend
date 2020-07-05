@@ -36,7 +36,7 @@ class LogInCard extends React.Component {
 
    onClickHandler = event => {
      event.preventDefault()
-     if (this.state.email === "admin" && this.state.password === "admin") {
+     if (this.state.email === "demo" && this.state.password === "demo") {
       this.props.getCurrentUser()
      }
      this.setState({
