@@ -1,4 +1,5 @@
 import React from "react";
+import ReactModal from 'react-modal'
 import {connect} from 'react-redux'
 
 import "assets/scss/material-kit-react.scss?v=1.8.0";
@@ -11,6 +12,14 @@ class App extends React.Component {
   renderContainer() {
     if (this.props.currentlyLoggedIn) {
       return <ApplicationContainer />
+    } else if (this.props.currentlyFetching) {
+      return (
+          <ReactModal isOpen={
+            this.props.currentlyFetching
+          }>
+            <h1>Loading demo user... please wait.</h1>
+          </ReactModal>
+      )
     } else {
       return <LogInContainer />
     }
@@ -26,8 +35,9 @@ class App extends React.Component {
 }
 
 const mapStateToProps = state => {
-  return{
-    currentlyLoggedIn: state.currentlyLoggedIn
+  return {
+    currentlyLoggedIn: state.currentlyLoggedIn,
+    currentlyFetching: state.currentlyFetching
   }
 }
 
